@@ -1,0 +1,663 @@
+<definitions id='definitions_0_id' name='definitions_0_name' namespace='https://www.omg.org/spec/DMN/20180505/DMN12'
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns:dmndi='http://www.omg.org/spec/DMN/20151101/DMNDI'>
+    <decision id='decision_60a9a8c8-2b83-5726-0c1d-96c4d100ea62' name='Bureau call type'>
+        <knowledgeRequirement id='knowledge_requirement_4b47d4d5-70f9-974f-5804-465aa95c864c'>
+            <requiredKnowledge href='#businessKnowledge_2c5dbcb1-1e7e-ab8d-ddc9-e99f4f075d2f'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_9777161f-5562-ffce-102b-11c93c6ee5ee'>
+            <requiredDecision href='#decision_1116ce3e-497f-4c34-7d20-c8110a682f32'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_1116ce3e-497f-4c34-7d20-c8110a682f32' name='Pre-bureau risk category'>
+        <knowledgeRequirement id='knowledge_requirement_4cceede0-9bdf-7a12-ca0b-eb338faceba9'>
+            <requiredKnowledge href='#businessKnowledge_ea43c952-4b8e-a482-08bb-5c748eab7a9b'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_270cc590-3f88-d07f-76fe-602435a6c0a9'>
+            <requiredDecision href='#decision_cc49110b-e91b-8ca8-58a1-7f017ae24020'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_91c0269a-eccb-26ec-e853-2dd715585b74'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_cc49110b-e91b-8ca8-58a1-7f017ae24020' name='Application risk score'>
+        <knowledgeRequirement id='knowledge_requirement_bb63e98e-e52e-8ea8-7ca2-c7ae8b74a0ab'>
+            <requiredKnowledge href='#businessKnowledge_3bcafd3f-c30a-24d1-c25b-aa0e95ddb015'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_8778b44d-1985-e54f-5bac-78762bc120a4'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_cf639d46-de11-81e7-05bb-e082808a3dec' name='Strategy'>
+        <informationRequirement id='information_requirement_496a7fb5-1ccf-07c3-726a-b679ac5a427e'>
+            <requiredDecision href='#decision_02985ea8-4381-5cec-3351-7a4082771351'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_5613c106-4baf-7aad-1b3a-7779f96886f5'>
+            <requiredDecision href='#decision_60a9a8c8-2b83-5726-0c1d-96c4d100ea62'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_02985ea8-4381-5cec-3351-7a4082771351' name='Eligibility'>
+        <knowledgeRequirement id='knowledge_requirement_97127bf3-233c-de75-1f23-a20901603a7c'>
+            <requiredKnowledge href='#businessKnowledge_8f41ebe1-4714-6342-4f71-3ec0dee48c2b'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_aa42f773-36cc-428c-889b-74332198e260'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_35352c4d-4cc5-e94b-db15-2aa418f4528f'>
+            <requiredDecision href='#decision_6d0dc475-5028-2c85-2be0-7e7ff6ddb156'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_241d7977-e209-79df-87d2-823fa5a56440'>
+            <requiredDecision href='#decision_1116ce3e-497f-4c34-7d20-c8110a682f32'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_08d82446-0bdc-9312-bd92-5a008d3a313a' name='Post-bureau affordability'>
+        <knowledgeRequirement id='knowledge_requirement_ceb468d4-a432-7a23-e614-a8a40a576b71'>
+            <requiredKnowledge href='#businessKnowledge_7c380631-033a-e5f2-7924-9ae79f328565'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_180bc06b-afa9-9dc1-6710-1bed203e17c1'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_c9d1053a-2281-8eb1-c03c-195a22793403'>
+            <requiredDecision href='#decision_61d51625-0f90-f270-28ef-1acba4a7ae4c'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_6153582d-ad72-a5db-44ae-689147c9f239'>
+            <requiredDecision href='#decision_48b2c00e-a5f8-e539-122c-6fa7738db7fd'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_6d0dc475-5028-2c85-2be0-7e7ff6ddb156' name='Pre-bureau affordability'>
+        <knowledgeRequirement id='knowledge_requirement_816880d4-1c93-bf9a-1b70-2b729874711b'>
+            <requiredKnowledge href='#businessKnowledge_7c380631-033a-e5f2-7924-9ae79f328565'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_3e87785f-a007-05ce-d466-620d7814fb41'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_c8457ddc-d3cb-0d4f-a7a1-a496c714f43b'>
+            <requiredDecision href='#decision_61d51625-0f90-f270-28ef-1acba4a7ae4c'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_669149bd-0790-02cc-2990-10826148746e'>
+            <requiredDecision href='#decision_1116ce3e-497f-4c34-7d20-c8110a682f32'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_61d51625-0f90-f270-28ef-1acba4a7ae4c' name='Required monthly installment'>
+        <knowledgeRequirement id='knowledge_requirement_873ce8d4-aaf1-ce03-0d2c-2911116aa65c'>
+            <requiredKnowledge href='#businessKnowledge_2f21ae9e-5334-fb0a-2d3b-ce89175051ce'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_0b0d980c-0a5b-34d1-9d09-aa55d01ead1e'>
+            <requiredInput href='#inputData_9f06e9aa-70c0-db6d-a801-30256336e339'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_48b2c00e-a5f8-e539-122c-6fa7738db7fd' name='Post-bureau risk category'>
+        <knowledgeRequirement id='knowledge_requirement_02750a18-b3f9-d3ae-d4f1-1f2235863c97'>
+            <requiredKnowledge href='#businessKnowledge_499933b3-09fe-cf4d-e778-2efeffb2c6d1'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_5862362b-47b1-f4b7-45c7-b2a9473d4382'>
+            <requiredInput href='#inputData_8df45ce1-5008-9e37-705d-0facbdd09e04'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_83b1ee86-7701-c1af-9f6d-97378b004ddb'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_f7302736-499e-e976-b203-9f0860812f44'>
+            <requiredDecision href='#decision_cc49110b-e91b-8ca8-58a1-7f017ae24020'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_0aad2d4c-1719-5b79-672a-983595f30fbc' name='Routing'>
+        <knowledgeRequirement id='knowledge_requirement_9f39c098-4ba2-1e9f-247d-a15a0bb35905'>
+            <requiredKnowledge href='#businessKnowledge_c478c74f-f9a4-4bf8-c546-d824baccadda'/>
+        </knowledgeRequirement>
+        <informationRequirement id='information_requirement_2d7026cc-9d4b-8aa8-246f-5682c3af7fa7'>
+            <requiredDecision href='#decision_48b2c00e-a5f8-e539-122c-6fa7738db7fd'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_8f6c7bc8-b21a-922f-f0d4-309b019e5cf4'>
+            <requiredInput href='#inputData_8df45ce1-5008-9e37-705d-0facbdd09e04'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_272659fe-7ac7-89b9-c85d-b60ace26d63e'>
+            <requiredDecision href='#decision_08d82446-0bdc-9312-bd92-5a008d3a313a'/>
+        </informationRequirement>
+    </decision>
+    <decision id='decision_e9342213-3128-470c-f236-625ebddd6c09' name='Adjudication'>
+        <informationRequirement id='information_requirement_ffb23c33-d93b-d5d1-55c3-25566cae1aa7'>
+            <requiredDecision href='#decision_0aad2d4c-1719-5b79-672a-983595f30fbc'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_a22334a8-381c-4644-d458-88ef00ed95f3'>
+            <requiredInput href='#inputData_8df45ce1-5008-9e37-705d-0facbdd09e04'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_b3694da4-f437-14e8-bfa1-cb1910631f0c'>
+            <requiredInput href='#inputData_0d68ce52-a1e8-57d0-6aad-bb63a1c75eb3'/>
+        </informationRequirement>
+        <informationRequirement id='information_requirement_d8463998-390a-00f9-b66b-617ea4002537'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </informationRequirement>
+        <authorityRequirement id='authority_requirement_87e590ef-6d34-ca08-9383-19f837a107bc'>
+            <requiredAuthority href='#knowledgeSource_ebeddc5e-6e9c-76dc-0b30-15896688bacc'/>
+        </authorityRequirement>
+    </decision>
+    <inputData id='inputData_82bf1bf3-eea6-9e4d-e35a-faf79db73532' name='Loan default data'></inputData>
+    <inputData id='inputData_cb71b24c-7168-7013-05ad-9326c4b78c20' name='Applicant data'></inputData>
+    <inputData id='inputData_9f06e9aa-70c0-db6d-a801-30256336e339' name='Requested product'></inputData>
+    <inputData id='inputData_8df45ce1-5008-9e37-705d-0facbdd09e04' name='Bureau data'></inputData>
+    <inputData id='inputData_0d68ce52-a1e8-57d0-6aad-bb63a1c75eb3' name='Supporting documents'></inputData>
+    <businessKnowledgeModel id='businessKnowledge_499933b3-09fe-cf4d-e778-2efeffb2c6d1' name='Post-bureau risk category table'>
+        <authorityRequirement id='authority_requirement_efea6485-a20f-49e4-cbfd-10778bc9276d'>
+            <requiredAuthority href='#knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_ea43c952-4b8e-a482-08bb-5c748eab7a9b' name='Pre-bureau risk category table'>
+        <authorityRequirement id='authority_requirement_09f717f9-bc82-47b5-e5f7-35a986dd1720'>
+            <requiredAuthority href='#knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_7a5a4677-9672-0285-0289-c7e826ec8d21' name='Credit contingency factor table'>
+        <authorityRequirement id='authority_requirement_2e9d1daa-678e-76d1-65be-8c673a82864a'>
+            <requiredAuthority href='#knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_3bcafd3f-c30a-24d1-c25b-aa0e95ddb015' name='Application risk score model'>
+        <authorityRequirement id='authority_requirement_bb896cac-dbe3-1a8a-e426-3b7747e4cb15'>
+            <requiredAuthority href='#knowledgeSource_244c5967-3e16-286d-c2e5-ed2c90fe64af'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_2c5dbcb1-1e7e-ab8d-ddc9-e99f4f075d2f' name='Bureau call type table'>
+        <authorityRequirement id='authority_requirement_1890ef30-fd8f-ddd8-e38b-36ec4dd77e1f'>
+            <requiredAuthority href='#knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_7c380631-033a-e5f2-7924-9ae79f328565' name='Affordability calculation'>
+        <knowledgeRequirement id='knowledge_requirement_f60ebff9-1bda-03d3-ad80-d9d411ae9f02'>
+            <requiredKnowledge href='#businessKnowledge_7a5a4677-9672-0285-0289-c7e826ec8d21'/>
+        </knowledgeRequirement>
+        <authorityRequirement id='authority_requirement_688e15b8-1971-ca46-4254-48736bce1bc8'>
+            <requiredAuthority href='#knowledgeSource_97fc72d8-6ded-6ccc-d544-fbd9d737a542'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_8f41ebe1-4714-6342-4f71-3ec0dee48c2b' name='Eligibility rules'>
+        <authorityRequirement id='authority_requirement_a18dbeb5-e5d1-082f-88f0-fd83b41aecde'>
+            <requiredAuthority href='#knowledgeSource_be022d55-351d-8980-e836-7ff2f4094d23'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_2f21ae9e-5334-fb0a-2d3b-ce89175051ce' name='Installment calculation'>
+        <knowledgeRequirement id='knowledge_requirement_7097899a-5ec3-3ec0-f2df-92bdf0958a76'>
+            <requiredKnowledge href='#businessKnowledge_1ac0aa55-d151-ca24-7712-d2849e7b3dd6'/>
+        </knowledgeRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_c478c74f-f9a4-4bf8-c546-d824baccadda' name='Routing rules'>
+        <authorityRequirement id='authority_requirement_1431642c-c449-eeae-3b46-2e4846c39090'>
+            <requiredAuthority href='#knowledgeSource_be022d55-351d-8980-e836-7ff2f4094d23'/>
+        </authorityRequirement>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id='businessKnowledge_1ac0aa55-d151-ca24-7712-d2849e7b3dd6' name='Financial.PMT'></businessKnowledgeModel>
+    <knowledgeSource id='knowledgeSource_244c5967-3e16-286d-c2e5-ed2c90fe64af' name='Credit risk analytics'>
+        <authorityRequirement id='authority_requirement_64e9ed41-be7b-741d-4e02-dc97102f75c4'>
+            <requiredInput href='#inputData_82bf1bf3-eea6-9e4d-e35a-faf79db73532'/>
+        </authorityRequirement>
+        <authorityRequirement id='authority_requirement_760af382-082d-a991-f255-76e5a8041597'>
+            <requiredAuthority href='#knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab'/>
+        </authorityRequirement>
+        <authorityRequirement id='authority_requirement_5237d1db-9157-b73e-3f06-eb596288c02c'>
+            <requiredInput href='#inputData_cb71b24c-7168-7013-05ad-9326c4b78c20'/>
+        </authorityRequirement>
+    </knowledgeSource>
+    <knowledgeSource id='knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab' name='Risk management strategy'></knowledgeSource>
+    <knowledgeSource id='knowledgeSource_97fc72d8-6ded-6ccc-d544-fbd9d737a542' name='Affordability spreadsheet'></knowledgeSource>
+    <knowledgeSource id='knowledgeSource_ebeddc5e-6e9c-76dc-0b30-15896688bacc' name='Credit officer experience'></knowledgeSource>
+    <knowledgeSource id='knowledgeSource_be022d55-351d-8980-e836-7ff2f4094d23' name='Product specification'></knowledgeSource>
+    <DMNDI id='dmdi_0_id'>
+        <DMNDiagram id='diagram_0_id' name='Cluster 1'>
+            <DMNShape dmnElementRef='decision_60a9a8c8-2b83-5726-0c1d-96c4d100ea62' id='shape_7d8709d5-8ecf-60fc-4857-7fc8fd0e9c4e'>
+                <Bounds x='720.5' y='31' width='160' height='60'/>
+                <DMNLabel id='label_109b55f2-e088-3287-8e97-373408dd0ddd'>
+                    <Bounds x='771.8440017700195' y='46.599999999999994' width='57.31199645996094' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_1116ce3e-497f-4c34-7d20-c8110a682f32' id='shape_996ea6dd-0220-4773-748a-925be5c99c8f'>
+                <Bounds x='526' y='211' width='160' height='60'/>
+                <DMNLabel id='label_84221cc4-325f-4b2f-1fed-0ac313df1bde'>
+                    <Bounds x='567.345' y='219.4' width='77.31' height='43.2'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_cc49110b-e91b-8ca8-58a1-7f017ae24020' id='shape_30f63ef7-f7f7-6a7b-cb0c-f9f64ce1fb8b'>
+                <Bounds x='125' y='211' width='160' height='60'/>
+                <DMNLabel id='label_c889a896-2e5f-e230-2984-21e44c81ffd0'>
+                    <Bounds x='172.8640022277832' y='226.6' width='64.2719955444336' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_499933b3-09fe-cf4d-e778-2efeffb2c6d1' id='shape_456fb2d2-971e-2bf6-931f-a900d728395e'>
+                <Bounds x='514.5' y='624' width='160' height='60'/>
+                <DMNLabel id='label_9e077f8a-44c7-fce3-e892-71a0ffc3a734'>
+                    <Bounds x='531.3740005493164' y='639.6' width='126.25199890136719' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_ea43c952-4b8e-a482-08bb-5c748eab7a9b' id='shape_8618c460-eb8d-3ed8-15a6-cbdc1678ea59'>
+                <Bounds x='526' y='345' width='160' height='60'/>
+                <DMNLabel id='label_d4beecb2-6bbf-77c5-3def-4ce648b194da'>
+                    <Bounds x='542.8740005493164' y='360.6' width='126.25199890136719' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_7a5a4677-9672-0285-0289-c7e826ec8d21' id='shape_8f6de576-3751-6485-108c-5b1b1d3f3375'>
+                <Bounds x='915' y='345' width='160' height='60'/>
+                <DMNLabel id='label_492d7780-387f-dbbe-249e-35fab7147d8a'>
+                    <Bounds x='931.8740005493164' y='360.6' width='126.25199890136719' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_3bcafd3f-c30a-24d1-c25b-aa0e95ddb015' id='shape_dd66b9f0-d8a4-98c9-0bfa-b98701ff9a92'>
+                <Bounds x='125' y='345' width='160' height='60'/>
+                <DMNLabel id='label_6cb861e9-5040-30b9-1a7d-2464b651ac04'>
+                    <Bounds x='141.8740005493164' y='360.6' width='126.25199890136719' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_2c5dbcb1-1e7e-ab8d-ddc9-e99f4f075d2f' id='shape_bf40ea6d-5f57-7a64-e32f-df70bdbcd7b8'>
+                <Bounds x='720.5' y='345' width='160' height='60'/>
+                <DMNLabel id='label_acda6238-fd7a-ac32-f1f5-7b4a24dd7b97'>
+                    <Bounds x='737.3740005493164' y='367.8' width='126.25199890136719' height='14.399999999999999'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='knowledgeSource_244c5967-3e16-286d-c2e5-ed2c90fe64af' id='shape_ca2a397d-a867-6fb0-0400-9f3c361466a6'>
+                <Bounds x='125' y='486' width='160' height='90'/>
+                <DMNLabel id='label_6d171d72-941b-4f52-0600-82fd9fcfb52d'>
+                    <Bounds x='146.7040023803711' y='523.8' width='116.59199523925781' height='14.399999999999999'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab' id='shape_394ef632-f9f6-dde2-e039-16fccb4d9ffc'>
+                <Bounds x='720.5' y='486' width='160' height='90'/>
+                <DMNLabel id='label_8c1e3818-da4e-7868-6dba-9f17b3e5ed79'>
+                    <Bounds x='742.2040023803711' y='516.6' width='116.59199523925781' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='inputData_82bf1bf3-eea6-9e4d-e35a-faf79db73532' id='shape_1d01396c-3d56-0ead-ceb2-58e3831496ff'>
+                <Bounds x='125' y='632' width='160' height='60'/>
+                <DMNLabel id='label_1309325b-26bf-618a-c23c-4ecf69d4cd1d'>
+                    <Bounds x='168.7779998779297' y='647.5999999999999' width='72.44400024414062' height='28.799999999999997'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='inputData_cb71b24c-7168-7013-05ad-9326c4b78c20' id='shape_ad479a88-4276-3c32-ec61-65e2af71c90f'>
+                <Bounds x='325.5' y='345' width='160' height='60'/>
+                <DMNLabel id='label_c70e773a-bb20-f096-68b1-f6d01c08229c'>
+                    <Bounds x='367.4720001220703' y='367.8' width='76.05599975585938' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='knowledgeSource_be022d55-351d-8980-e836-7ff2f4094d23' id='shape_aa3ca916-69ef-d5be-6fc8-e6f3694eef14'>
+                <Bounds x='1304' y='407' width='160' height='90'/>
+                <DMNLabel id='label_2c1104be-a086-40b4-807a-54fc0ed105c2'>
+                    <Bounds x='1328.583999633789' y='444.8' width='110.83200073242188' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_8f41ebe1-4714-6342-4f71-3ec0dee48c2b' id='shape_2df10532-f1c4-f953-7635-99ffec5ff7ed'>
+                <Bounds x='1304' y='268' width='160' height='60'/>
+                <DMNLabel id='label_f116adea-b42a-8420-ae52-805f7914be2f'>
+                    <Bounds x='1345.3720016479492' y='290.8' width='77.25599670410156' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_48b2c00e-a5f8-e539-122c-6fa7738db7fd' id='shape_373d673c-32ba-3671-6c18-8c1798c065f6'>
+                <Bounds x='325.5' y='31' width='160' height='60'/>
+                <DMNLabel id='label_02efcd5d-456b-a812-80f1-56f69ac7b66e'>
+                    <Bounds x='337.89801025390625' y='47.8' width='135.2039794921875' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_08d82446-0bdc-9312-bd92-5a008d3a313a' id='shape_8f85d9b8-2bfe-72f4-ac2d-8c33a7d623dc'>
+                <Bounds x='136' y='31' width='160' height='60'/>
+                <DMNLabel id='label_9f0262c8-b776-b4de-aaf4-5ccf054977b2'>
+                    <Bounds x='149.86800384521484' y='53.8' width='132.2639923095703' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_6d0dc475-5028-2c85-2be0-7e7ff6ddb156' id='shape_553c76b4-3cfb-681f-46a7-8c3b95015a29'>
+                <Bounds x='526' y='31' width='160' height='60'/>
+                <DMNLabel id='label_69816bbf-79ff-5590-48f0-ea9b7cb1e8f3'>
+                    <Bounds x='542.3940010070801' y='53.8' width='127.21199798583984' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_02985ea8-4381-5cec-3351-7a4082771351' id='shape_cd891fc3-9869-be03-3df3-6bbd90da7657'>
+                <Bounds x='894' y='155' width='160' height='60'/>
+                <DMNLabel id='label_93d0c43e-bef3-ca36-c994-c987696be5e9'>
+                    <Bounds x='949.568000793457' y='177.8' width='48.86399841308594' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_cf639d46-de11-81e7-05bb-e082808a3dec' id='shape_6ea89e20-5fb9-104a-c094-02ebea13299f'>
+                <Bounds x='1099' y='31' width='160' height='60'/>
+                <DMNLabel id='label_53ee837e-705b-a86e-0a16-c37bb61dfd1b'>
+                    <Bounds x='1156.7159996032715' y='53.8' width='44.56800079345703' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_61d51625-0f90-f270-28ef-1acba4a7ae4c' id='shape_4646db51-5905-8a03-8aa1-fb4ad3a229ef'>
+                <Bounds x='36' y='132' width='160' height='60'/>
+                <DMNLabel id='label_f007849e-1c02-4841-7fda-038a063a43c2'>
+                    <Bounds x='38.282012939453125' y='154.8' width='155.43597412109375' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_7c380631-033a-e5f2-7924-9ae79f328565' id='shape_90d54e50-b1bd-2ca0-ebe8-03877421f659'>
+                <Bounds x='915' y='243' width='160' height='60'/>
+                <DMNLabel id='label_75869ab1-c071-11db-9bae-fb2c7a1de3d0'>
+                    <Bounds x='931.7540054321289' y='265.8' width='126.49198913574219' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNEdge dmnElementRef='information_requirement_9777161f-5562-ffce-102b-11c93c6ee5ee' id='edge_4d09c1a0-1c1e-b7a3-013d-16fb2c06f316'>
+                <waypoint x='638' y='211'></waypoint>
+                <waypoint x='768' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_270cc590-3f88-d07f-76fe-602435a6c0a9' id='edge_481894e3-8e7b-4845-780e-2adcd5d19d01'>
+                <waypoint x='285' y='241'></waypoint>
+                <waypoint x='526' y='241'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_64e9ed41-be7b-741d-4e02-dc97102f75c4' id='edge_409ec405-f5ff-1fe9-a8a6-f2cffe534a7a'>
+                <waypoint x='205' y='632'></waypoint>
+                <waypoint x='205' y='576'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_760af382-082d-a991-f255-76e5a8041597' id='edge_1ba9209f-ec63-aa44-5dfb-240960b0b6f4'>
+                <waypoint x='720.5' y='531'></waypoint>
+                <waypoint x='285' y='531'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_1890ef30-fd8f-ddd8-e38b-36ec4dd77e1f' id='edge_13e16a5e-2beb-966f-715e-22f5d9fd6ed2'>
+                <waypoint x='801' y='486'></waypoint>
+                <waypoint x='801' y='405'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_09f717f9-bc82-47b5-e5f7-35a986dd1720' id='edge_dac7ee5e-cbc4-c948-a755-37aed082cd44'>
+                <waypoint x='744' y='486'></waypoint>
+                <waypoint x='643' y='405'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_2e9d1daa-678e-76d1-65be-8c673a82864a' id='edge_dbde1c80-42f5-7922-0949-bcaccca432e4'>
+                <waypoint x='857' y='486'></waypoint>
+                <waypoint x='958' y='405'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_efea6485-a20f-49e4-cbfd-10778bc9276d' id='edge_c6c224b7-3332-eccd-4af0-509789df7ca9'>
+                <waypoint x='725' y='576'></waypoint>
+                <waypoint x='645' y='624'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_bb896cac-dbe3-1a8a-e426-3b7747e4cb15' id='edge_f44ed295-debd-688c-2ac8-7047312b35ac'>
+                <waypoint x='205' y='486'></waypoint>
+                <waypoint x='205' y='405'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_bb63e98e-e52e-8ea8-7ca2-c7ae8b74a0ab' id='edge_3a65aa34-1f72-5917-dd7c-0ab5d2f8c6d3'>
+                <waypoint x='205' y='345'></waypoint>
+                <waypoint x='205' y='271'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_4cceede0-9bdf-7a12-ca0b-eb338faceba9' id='edge_8c2dd86c-f05b-77a7-0462-976fe4f1ba4c'>
+                <waypoint x='606' y='345'></waypoint>
+                <waypoint x='606' y='271'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_4b47d4d5-70f9-974f-5804-465aa95c864c' id='edge_aa6f08e0-13ea-439a-aabe-9bd3a467779b'>
+                <waypoint x='801' y='345'></waypoint>
+                <waypoint x='801' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_8778b44d-1985-e54f-5bac-78762bc120a4' id='edge_490c87e0-bd7e-d41d-1458-38b9cdba1e18'>
+                <waypoint x='361' y='345'></waypoint>
+                <waypoint x='250' y='271'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_91c0269a-eccb-26ec-e853-2dd715585b74' id='edge_8107c59d-3c97-d7c1-4805-8657659d4078'>
+                <waypoint x='450' y='345'></waypoint>
+                <waypoint x='561' y='271'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_5237d1db-9157-b73e-3f06-eb596288c02c' id='edge_2a4642f6-aca6-be62-c1d4-9617c554ca11'>
+                <waypoint x='367' y='405'></waypoint>
+                <waypoint x='263' y='486'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_a18dbeb5-e5d1-082f-88f0-fd83b41aecde' id='edge_8961646b-d99e-5e1f-1b25-33076c6045f5'>
+                <waypoint x='1384' y='407'></waypoint>
+                <waypoint x='1384' y='328'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_02750a18-b3f9-d3ae-d4f1-1f2235863c97' id='edge_1861ea12-84f3-d613-3473-5567a07214d4'>
+                <waypoint x='585' y='624'></waypoint>
+                <waypoint x='415' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_83b1ee86-7701-c1af-9f6d-97378b004ddb' id='edge_2148840d-b1e7-4ce5-f662-2d6f00c164a6'>
+                <waypoint x='406' y='345'></waypoint>
+                <waypoint x='406' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_f7302736-499e-e976-b203-9f0860812f44' id='edge_60e2235d-546a-74d6-4175-2fe68efe524f'>
+                <waypoint x='238' y='211'></waypoint>
+                <waypoint x='372' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_180bc06b-afa9-9dc1-6710-1bed203e17c1' id='edge_045b5d6e-7aa2-bbc6-a920-e29492318cb6'>
+                <waypoint x='387' y='345'></waypoint>
+                <waypoint x='234' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_6153582d-ad72-a5db-44ae-689147c9f239' id='edge_a1f2bef4-e6bf-c58c-f0ce-c3224201f212'>
+                <waypoint x='325.5' y='61'></waypoint>
+                <waypoint x='296' y='61'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_3e87785f-a007-05ce-d466-620d7814fb41' id='edge_ac984893-9b93-0cc5-ecf1-bc6c35524411'>
+                <waypoint x='425' y='345'></waypoint>
+                <waypoint x='587' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_669149bd-0790-02cc-2990-10826148746e' id='edge_10765b53-7f33-a414-01b9-2407a087db32'>
+                <waypoint x='606' y='211'></waypoint>
+                <waypoint x='606' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_97127bf3-233c-de75-1f23-a20901603a7c' id='edge_f9a84090-2d2f-b1aa-3e36-cec228a0cbad'>
+                <waypoint x='1304' y='276'></waypoint>
+                <waypoint x='1054' y='207'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_aa42f773-36cc-428c-889b-74332198e260' id='edge_3d76b64b-5fb7-78e3-e9bf-915927c00817'>
+                <waypoint x='485.5' y='348'></waypoint>
+                <waypoint x='894' y='212'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_35352c4d-4cc5-e94b-db15-2aa418f4528f' id='edge_4bb6fec2-a76e-7041-17b9-c6e66c5d91d2'>
+                <waypoint x='686' y='88'></waypoint>
+                <waypoint x='894' y='158'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_241d7977-e209-79df-87d2-823fa5a56440' id='edge_346731ba-98b8-4143-027e-01ef31f7fb15'>
+                <waypoint x='686' y='229'></waypoint>
+                <waypoint x='894' y='197'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_496a7fb5-1ccf-07c3-726a-b679ac5a427e' id='edge_70986095-d892-d4ca-ff49-a01ae5b7edbb'>
+                <waypoint x='1024' y='155'></waypoint>
+                <waypoint x='1129' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_5613c106-4baf-7aad-1b3a-7779f96886f5' id='edge_8bd76ad6-fe24-8d6d-fb30-2aa45a6d717a'>
+                <waypoint x='880.5' y='61'></waypoint>
+                <waypoint x='1099' y='61'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_c9d1053a-2281-8eb1-c03c-195a22793403' id='edge_78362efd-4873-c48f-5018-ccc5135f1125'>
+                <waypoint x='146' y='132'></waypoint>
+                <waypoint x='186' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_c8457ddc-d3cb-0d4f-a7a1-a496c714f43b' id='edge_ea52d211-7837-957f-9d59-206e27d9bbde'>
+                <waypoint x='196' y='146'></waypoint>
+                <waypoint x='526' y='77'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_ceb468d4-a432-7a23-e614-a8a40a576b71' id='edge_a3798c9f-9867-b884-684c-d0c02b0f47fd'>
+                <waypoint x='915' y='251'></waypoint>
+                <waypoint x='296' y='83'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_816880d4-1c93-bf9a-1b70-2b729874711b' id='edge_da5349f1-81ed-edf8-a631-242661545a24'>
+                <waypoint x='940' y='243'></waypoint>
+                <waypoint x='661' y='91'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_f60ebff9-1bda-03d3-ad80-d9d411ae9f02' id='edge_9fa48275-e555-fbf9-8ebd-be36d3350e0b'>
+                <waypoint x='995' y='345'></waypoint>
+                <waypoint x='995' y='303'></waypoint>
+            </DMNEdge>
+        </DMNDiagram>
+        <DMNDiagram id='diagram_48f154ac-1636-8f2e-8763-c68147dd042b' name='Cluster 2'>
+            <DMNShape dmnElementRef='inputData_8df45ce1-5008-9e37-705d-0facbdd09e04' id='shape_0ddcf08d-dbba-f5c3-8b70-4ca80474ada2'>
+                <Bounds x='732' y='507' width='160' height='60'/>
+                <DMNLabel id='label_6bd36be6-1934-1144-cadd-baee00412748'>
+                    <Bounds x='780.0080013275146' y='529.8' width='63.9839973449707' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='inputData_0d68ce52-a1e8-57d0-6aad-bb63a1c75eb3' id='shape_94d7a87a-c2e4-a1c1-2148-39048582ef0a'>
+                <Bounds x='953' y='507' width='160' height='60'/>
+                <DMNLabel id='label_645bd2d4-3e22-3775-1050-c556e7aa0502'>
+                    <Bounds x='973.6960067749023' y='529.8' width='118.60798645019531' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='knowledgeSource_ebeddc5e-6e9c-76dc-0b30-15896688bacc' id='shape_622081bb-b36f-973b-05eb-88d2583ac41f'>
+                <Bounds x='1160' y='340' width='160' height='90'/>
+                <DMNLabel id='label_4513a016-6730-0bd8-a994-b1f8d3fde9ba'>
+                    <Bounds x='1174.9180068969727' y='377.8' width='130.1639862060547' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_c478c74f-f9a4-4bf8-c546-d824baccadda' id='shape_b2d71962-b60f-d686-2a24-49b94bee6138'>
+                <Bounds x='354' y='241' width='160' height='60'/>
+                <DMNLabel id='label_de3d591d-e11d-0344-e7c7-2bd98d164f7e'>
+                    <Bounds x='399.0919990539551' y='263.8' width='69.81600189208984' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_0aad2d4c-1719-5b79-672a-983595f30fbc' id='shape_6c90c546-34b6-3cd0-d74c-fd1a26776f53'>
+                <Bounds x='535' y='241' width='160' height='60'/>
+                <DMNLabel id='label_c32ca96b-df4b-94df-e652-5d21c8fd9895'>
+                    <Bounds x='594.2879981994629' y='263.8' width='41.42400360107422' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_e9342213-3128-470c-f236-625ebddd6c09' id='shape_30d9ae2c-9261-2271-1d45-f1a003127c1e'>
+                <Bounds x='808' y='102' width='160' height='60'/>
+                <DMNLabel id='label_3822f4cc-1ba6-e50b-e149-d3f6fecb5a4d'>
+                    <Bounds x='854.5260009765625' y='124.8' width='66.947998046875' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='inputData_cb71b24c-7168-7013-05ad-9326c4b78c20' id='shape_d525f420-93c6-2b03-687f-f2e020dc1e45'>
+                <Bounds x='44' y='46' width='160' height='60'/>
+                <DMNLabel id='label_fcc1921e-c732-2ed0-d0a6-6179ed95a5ca'>
+                    <Bounds x='85.97200012207031' y='68.8' width='76.05599975585938' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='knowledgeSource_be022d55-351d-8980-e836-7ff2f4094d23' id='shape_25941fe4-ce63-dcaa-aab1-c8190e79c3c0'>
+                <Bounds x='360' y='340' width='160' height='90'/>
+                <DMNLabel id='label_6d6c9810-3965-5918-9bf0-fc01ab82464d'>
+                    <Bounds x='384.58399963378906' y='377.8' width='110.83200073242188' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_48b2c00e-a5f8-e539-122c-6fa7738db7fd' id='shape_4a149f6b-7d7a-2562-403b-4790b613a86d'>
+                <Bounds x='354' y='606.5' width='160' height='60'/>
+                <DMNLabel id='label_68f5b711-c117-3393-9be2-07d676708f1d'>
+                    <Bounds x='366.39801025390625' y='629.3' width='135.2039794921875' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_08d82446-0bdc-9312-bd92-5a008d3a313a' id='shape_3b0ee89f-7cdc-f986-d137-7cb09a6dcfd1'>
+                <Bounds x='195' y='121' width='160' height='60'/>
+                <DMNLabel id='label_d9a1419b-d8e9-8933-9ca6-17cacb8e04e5'>
+                    <Bounds x='208.86800384521484' y='143.8' width='132.2639923095703' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNEdge dmnElementRef='knowledge_requirement_9f39c098-4ba2-1e9f-247d-a15a0bb35905' id='edge_c7e15996-5d3b-c2e0-f684-4e564102ce21'>
+                <waypoint x='514' y='271'></waypoint>
+                <waypoint x='535' y='271'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_8f6c7bc8-b21a-922f-f0d4-309b019e5cf4' id='edge_8b5a5456-62a5-553f-e494-e6090a6e9fdd'>
+                <waypoint x='790' y='507'></waypoint>
+                <waypoint x='637' y='301'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_ffb23c33-d93b-d5d1-55c3-25566cae1aa7' id='edge_ffffbaa8-d9ff-0443-8740-0792d549e4f6'>
+                <waypoint x='674' y='241'></waypoint>
+                <waypoint x='829' y='162'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_a22334a8-381c-4644-d458-88ef00ed95f3' id='edge_8b36d139-868f-6314-85a0-83511b332376'>
+                <waypoint x='818' y='507'></waypoint>
+                <waypoint x='882' y='162'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_b3694da4-f437-14e8-bfa1-cb1910631f0c' id='edge_4a6ea15b-d813-66aa-eacb-64f564fc13aa'>
+                <waypoint x='1022' y='507'></waypoint>
+                <waypoint x='899' y='162'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_87e590ef-6d34-ca08-9383-19f837a107bc' id='edge_eb560632-62c1-1471-dafc-8c5b781e736c'>
+                <waypoint x='1177' y='340'></waypoint>
+                <waypoint x='930' y='162'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_d8463998-390a-00f9-b66b-617ea4002537' id='edge_7b78ece6-a0cf-6fa0-5875-484079e86710'>
+                <waypoint x='204' y='82'></waypoint>
+                <waypoint x='808' y='126'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_1431642c-c449-eeae-3b46-2e4846c39090' id='edge_29f8ba44-7321-f2c9-b7f1-b9659b608afa'>
+                <waypoint x='438' y='340'></waypoint>
+                <waypoint x='436' y='301'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_5862362b-47b1-f4b7-45c7-b2a9473d4382' id='edge_c3c81777-bd30-17a1-6779-66d7fd183c1e'>
+                <waypoint x='732' y='558'></waypoint>
+                <waypoint x='514' y='615'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_83b1ee86-7701-c1af-9f6d-97378b004ddb' id='edge_fbb24437-0504-e163-3677-6977cd0f707f'>
+                <waypoint x='141' y='106'></waypoint>
+                <waypoint x='417' y='606.5'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_2d7026cc-9d4b-8aa8-246f-5682c3af7fa7' id='edge_27ec7c53-5d8f-ec8b-8ad0-4ee732898b5b'>
+                <waypoint x='449' y='606.5'></waypoint>
+                <waypoint x='600' y='301'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_180bc06b-afa9-9dc1-6710-1bed203e17c1' id='edge_44175b17-8681-85bc-29df-87dbad927d72'>
+                <waypoint x='184' y='106'></waypoint>
+                <waypoint x='215' y='121'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_6153582d-ad72-a5db-44ae-689147c9f239' id='edge_36aefc21-3cc9-dc84-6844-4455fe00cec0'>
+                <waypoint x='424' y='606.5'></waypoint>
+                <waypoint x='285' y='181'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_272659fe-7ac7-89b9-c85d-b60ace26d63e' id='edge_20625674-e83e-1569-596b-3d106c60a14c'>
+                <waypoint x='355' y='179'></waypoint>
+                <waypoint x='535' y='243'></waypoint>
+            </DMNEdge>
+        </DMNDiagram>
+        <DMNDiagram id='diagram_6afee4a4-b5c9-9b1b-3998-7d54928f1ef0' name='Cluster 3'>
+            <DMNShape dmnElementRef='inputData_9f06e9aa-70c0-db6d-a801-30256336e339' id='shape_d7388e3c-1e3f-8dec-4feb-88bbb9c6103f'>
+                <Bounds x='469' y='305' width='160' height='60'/>
+                <DMNLabel id='label_beac24b4-e6dc-5a73-c8e6-0ef6334a8c7b'>
+                    <Bounds x='498.86399841308594' y='327.8' width='100.27200317382812' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_1ac0aa55-d151-ca24-7712-d2849e7b3dd6' id='shape_7f24b0f1-5854-d583-db30-65662ff01e62'>
+                <Bounds x='691' y='426' width='160' height='60'/>
+                <DMNLabel id='label_9fec1236-1508-3483-12d6-7d89077cea47'>
+                    <Bounds x='733.439998626709' y='448.8' width='75.12000274658203' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_2f21ae9e-5334-fb0a-2d3b-ce89175051ce' id='shape_94eb38be-b957-8913-2f53-e8820b3e0aff'>
+                <Bounds x='691' y='305' width='160' height='60'/>
+                <DMNLabel id='label_4c39531f-ffd9-bfd3-c764-8da1262252d5'>
+                    <Bounds x='711.5220031738281' y='327.8' width='118.95599365234375' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='decision_61d51625-0f90-f270-28ef-1acba4a7ae4c' id='shape_2d3b103f-98a2-a225-65ef-6aa762ebf097'>
+                <Bounds x='691' y='152' width='160' height='60'/>
+                <DMNLabel id='label_7371890a-8872-ca49-ac37-9890ce6762c1'>
+                    <Bounds x='693.2820129394531' y='174.8' width='155.43597412109375' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNEdge dmnElementRef='knowledge_requirement_7097899a-5ec3-3ec0-f2df-92bdf0958a76' id='edge_50eab3c3-6c4e-9db1-a08a-bedacb2f443f'>
+                <waypoint x='771' y='426'></waypoint>
+                <waypoint x='771' y='365'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_873ce8d4-aaf1-ce03-0d2c-2911116aa65c' id='edge_5de15f25-de76-9e6c-bb98-7d56e5560200'>
+                <waypoint x='771' y='305'></waypoint>
+                <waypoint x='771' y='212'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='information_requirement_0b0d980c-0a5b-34d1-9d09-aa55d01ead1e' id='edge_b9653c2e-308f-02cd-c27c-ad047f3950ea'>
+                <waypoint x='593' y='305'></waypoint>
+                <waypoint x='727' y='212'></waypoint>
+            </DMNEdge>
+        </DMNDiagram>
+        <DMNDiagram id='diagram_a9ec1342-1e6c-2aa7-cc54-73f06b1cb1f4' name='Cluster 4'>
+            <DMNShape dmnElementRef='knowledgeSource_734a8582-89a2-c118-0a11-fbeea21efdab' id='shape_9c88af77-eb47-8790-af2a-7cb8e8b9ec3f'>
+                <Bounds x='485' y='499' width='160' height='90'/>
+                <DMNLabel id='label_bdcc8f7f-4907-11fb-53d7-5f99a5959f5b'>
+                    <Bounds x='495.6279983520508' y='536.8' width='138.74400329589844' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='knowledgeSource_97fc72d8-6ded-6ccc-d544-fbd9d737a542' id='shape_25e549ae-da5e-8c8e-d0ee-900258ccf7ab'>
+                <Bounds x='649' y='499' width='160' height='90'/>
+                <DMNLabel id='label_87d43f3f-3440-95cd-992a-9866fc67b03f'>
+                    <Bounds x='661.9560012817383' y='536.8' width='134.08799743652344' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_7a5a4677-9672-0285-0289-c7e826ec8d21' id='shape_0a71db34-d376-1733-a820-c9edaafaa43c'>
+                <Bounds x='485' y='323' width='160' height='60'/>
+                <DMNLabel id='label_22d14ffb-5e0c-002d-efd4-efbc644b85da'>
+                    <Bounds x='483.5500183105469' y='345.8' width='162.89996337890625' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNShape dmnElementRef='businessKnowledge_7c380631-033a-e5f2-7924-9ae79f328565' id='shape_d82cda9e-0c05-68ee-c5cd-6363f01c12ed'>
+                <Bounds x='649' y='191' width='160' height='60'/>
+                <DMNLabel id='label_f4e9f5c3-bd2f-b16b-8f8a-fb49a86464ad'>
+                    <Bounds x='665.7540054321289' y='213.8' width='126.49198913574219' height='14.4'/>
+                </DMNLabel>
+            </DMNShape>
+            <DMNEdge dmnElementRef='authority_requirement_2e9d1daa-678e-76d1-65be-8c673a82864a' id='edge_63034569-f176-f4a9-dad6-19b6e3b27f20'>
+                <waypoint x='565' y='499'></waypoint>
+                <waypoint x='565' y='383'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='knowledge_requirement_f60ebff9-1bda-03d3-ad80-d9d411ae9f02' id='edge_00e70b19-99de-985b-48eb-df1e76107470'>
+                <waypoint x='602' y='323'></waypoint>
+                <waypoint x='692' y='251'></waypoint>
+            </DMNEdge>
+            <DMNEdge dmnElementRef='authority_requirement_688e15b8-1971-ca46-4254-48736bce1bc8' id='edge_710cb3e3-b05a-0527-12ac-43f9e14f0b03'>
+                <waypoint x='729' y='499'></waypoint>
+                <waypoint x='729' y='251'></waypoint>
+            </DMNEdge>
+        </DMNDiagram>
+    </DMNDI>
+</definitions>
