@@ -19,7 +19,7 @@ We set `times` and `stable_limit` to 4 to let the algorithm run for a longer tim
 | --- | --- | --- |
 | 0.58831 | 0.61042 | 6 - 8 |
 
-With respect to the [Varied interaction levels](/results/7-varied-interaction-levels) experiment we have.
+With respect to the [Varied interaction levels](/results/07-varied-interaction-levels) experiment we have.
 
 - Similar likeness mean and median.
 - Same delta between the maximum and the minimum number of clusters (i.e., 2).

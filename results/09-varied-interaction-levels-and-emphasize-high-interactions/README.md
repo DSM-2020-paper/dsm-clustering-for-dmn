@@ -19,7 +19,7 @@ We set `pow_bid` to -1 to penalize small clusters instead of large ones. We incr
 | --- | --- | --- |
 | 0.61692 | 0.6124 | 7 - 11 |
 
-With respect to the [Varied interaction levels](/results/7-varied-interaction-levels) experiment we have.
+With respect to the [Varied interaction levels](/results/07-varied-interaction-levels) experiment we have.
 
 - Similar likeness mean and median.
 - Higher delta between the maximum and the minimum number of clusters (i.e., 4).

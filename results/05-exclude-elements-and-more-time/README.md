@@ -19,4 +19,4 @@ We set `times` and `stable_limit` to 4 to let the algorithm run for a longer tim
 | --- | --- | --- |
 | 0.66507 | 0.66454 | 7 - 10 |
 
-The likeness mean and median are close to the ones of the experiment [Exclude elements with high number of outputs](/results/3-exclude-elements-with-high-number-of-outputs). We get small clusters (size 1 to 3) and clusterings with many clusters.
+The likeness mean and median are close to the ones of the experiment [Exclude elements with high number of outputs](/results/03-exclude-elements-with-high-number-of-outputs). We get small clusters (size 1 to 3) and clusterings with many clusters.

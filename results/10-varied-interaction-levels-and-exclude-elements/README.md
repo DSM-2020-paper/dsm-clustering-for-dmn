@@ -19,7 +19,7 @@ We exclude *Applicant data* and *Risk management strategy*.
 | --- | --- | --- |
 | 0.66831 | 0.6682 | 8 - 12 |
 
-With respect to the [Varied interaction levels](/results/7-varied-interaction-levels) experiment we have.
+With respect to the [Varied interaction levels](/results/07-varied-interaction-levels) experiment we have.
 
 - Higher likeness mean and median.
 - Higher delta between the maximum and the minimum number of clusters (i.e., 4).

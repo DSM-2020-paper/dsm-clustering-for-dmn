@@ -29,17 +29,17 @@ We use the likeness cluster analysis to evaluate the effects of changing paramet
 
 | **Experiment** |  **Likeness mean** | **Likeness median** | **# clusters** |
 | --- | --- | --- | --- |
-| [Penalize small clusters](/results/1-penalize-small-clusters)<sup>(1)</sup>  | 0.5749 | 0.50706 | 4 - 10 |
-| [Emphasize high interactions](/results/2-emphasize-high-interactions) | 0.53431 | 0.5501 | 5 - 9 |
-| [Exclude elements with high number of outputs](/results/3-exclude-elements-with-high-number-of-outputs)<sup>(1)</sup> | 0.6991 | 0.70922 | 6 - 10<sup>(2)</sup> |
-| [Run for a longer time](/results/4-run-for-a-longer-time)<sup>(1)</sup> | 0.53119 | 0.5511 | 4 - 7 |
-| [Exclude elements and more time](/results/5-exclude-elements-and-more-time) | 0.66507 | 0.66454 | 7 - 10<sup>(2)</sup> |
-| [Emphasize high interactions and more time](/results/6-emphasize-high-interactions-and-more-time) | 0.53745 | 0.53321 | 5 - 9 |
-| [Varied interaction levels](/results/7-varied-interaction-levels) | 0.60985 | 0.61259 | 8 - 10 |
-| [Varied interaction levels and more time](/results/8-varied-interaction-levels-and-more-time) | 0.58831 | 0.61042 | 6 - 8 |
-| [Varied interaction levels and emphasize high interactions](/results/9-varied-interaction-levels-and-emphasize-high-interactions) | 0.61692 | 0.6124 | 7 - 11 |
-| [Varied interaction levels and exclude elements](/results/10-varied-interaction-levels-and-exclude-elements) | 0.66831 | 0.6682 | 8 - 12<sup>(2)</sup> |
-| [Emphasize high interactions and exclude elements](/results/11-emphasize-high-interactions-and-exclude-elements) | 0.70994 | 0.70361 | 7 - 10 |
+| [Penalize small clusters](results/01-penalize-small-clusters)<sup>(1)</sup>  | 0.5749 | 0.50706 | 4 - 10 |
+| [Emphasize high interactions](results/02-emphasize-high-interactions) | 0.53431 | 0.5501 | 5 - 9 |
+| [Exclude elements with high number of outputs](results/03-exclude-elements-with-high-number-of-outputs)<sup>(1)</sup> | 0.6991 | 0.70922 | 6 - 10<sup>(2)</sup> |
+| [Run for a longer time](results/04-run-for-a-longer-time)<sup>(1)</sup> | 0.53119 | 0.5511 | 4 - 7 |
+| [Exclude elements and more time](results/05-exclude-elements-and-more-time) | 0.66507 | 0.66454 | 7 - 10<sup>(2)</sup> |
+| [Emphasize high interactions and more time](results/06-emphasize-high-interactions-and-more-time) | 0.53745 | 0.53321 | 5 - 9 |
+| [Varied interaction levels](results/07-varied-interaction-levels) | 0.60985 | 0.61259 | 8 - 10 |
+| [Varied interaction levels and more time](results/08-varied-interaction-levels-and-more-time) | 0.58831 | 0.61042 | 6 - 8 |
+| [Varied interaction levels and emphasize high interactions](results/09-varied-interaction-levels-and-emphasize-high-interactions) | 0.61692 | 0.6124 | 7 - 11 |
+| [Varied interaction levels and exclude elements](results/10-varied-interaction-levels-and-exclude-elements) | 0.66831 | 0.6682 | 8 - 12<sup>(2)</sup> |
+| [Emphasize high interactions and exclude elements](results/11-emphasize-high-interactions-and-exclude-elements) | 0.70994 | 0.70361 | 7 - 10 |
 
 <sup>(1)</sup> Interesting clustered DSMs.
 

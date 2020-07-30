@@ -19,4 +19,4 @@ We set `pow_bid` to -1 to penalize small clusters instead of large ones. We incr
 | --- | --- | --- |
 | 0.53431 | 0.5501 | 5 - 9 |
 
-There's no much difference in results with respect to the [Penalize small clusters](/results/1-penalize-small-clusters) experiment.
+There's no much difference in results with respect to the [Penalize small clusters](/results/01-penalize-small-clusters) experiment.

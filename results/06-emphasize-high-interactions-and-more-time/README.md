@@ -19,4 +19,4 @@ We increased `pow_dep`, `times` and `stable_limit`. We set `pow_bid` to -1 to pe
 | --- | --- | --- |
 | 0.53745 | 0.53321 | 5 - 9 |
 
-There's no much difference in results with respect to the [Emphasize high interactions](/results/2-emphasize-high-interactions) experiment.
+There's no much difference in results with respect to the [Emphasize high interactions](/results/02-emphasize-high-interactions) experiment.

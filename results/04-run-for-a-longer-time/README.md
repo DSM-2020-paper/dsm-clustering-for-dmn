@@ -19,6 +19,6 @@ We set `times` and `stable_limit` to 4 to let the algorithm run for a longer tim
 | --- | --- | --- |
 | 0.53119 | 0.5511 | 4 - 7 |
 
-The likeness mean and median are similar to the ones of [Penalize small clusters](/results/1-penalize-small-clusters) and [Emphasize high interactions](/results/2-emphasize-high-interactions) experiment. The number of clusters varies only from 4 to 7, sometimes we get small clusters (size 1 to 3).
+The likeness mean and median are similar to the ones of [Penalize small clusters](/results/01-penalize-small-clusters) and [Emphasize high interactions](/results/02-emphasize-high-interactions) experiment. The number of clusters varies only from 4 to 7, sometimes we get small clusters (size 1 to 3).
 
 Despite the inconsistency of the results with respect to cluster likeness, the results we get with the above parameters could be useful most of the times. The maximum number of clusters is not that high and DRDs for small clusters could be merged with other DRDs.
